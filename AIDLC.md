@@ -67,6 +67,52 @@ These are heuristics, not rules. A good EM will revise them quarterly as the sub
 
 What the operating model deliberately refuses to do is pick a winner. The vendor landscape is moving fast enough that any winner-pick in v0.1 of this document will look quaint by v0.2. The substrate-agnostic stance is the whole point of the operating model: the EM is investing in a way of working that survives the next vendor reshuffle.
 
+## 7. Failure modes
+
+Every operating model has predictable ways it goes wrong. The ones below are the ones I have either seen or read carefully-documented accounts of. Each one gets a name, a short description, and the one-line mitigation a Director can put on a planning doc.
+
+**Spec rot.** Specs authored with AI assistance start drifting from the working code within weeks. The squad keeps shipping; the spec gets stale; the next AI-assisted change refers back to a spec that no longer matches reality and generates the wrong thing. *Mitigation: the spec is a living document with a named owner per squad. Owners review at least monthly. The CI fails when a spec file is older than its corresponding code by more than thirty days.*
+
+**Steering drift.** The CLAUDE.md, the Cursor rules file, the system prompt, the agent's tool list. All four drift independently. The squad ends up with five subtly different sets of guard-rails and no clean way to ask "what is the agent allowed to do today?". *Mitigation: one canonical steering file per repo, named consistently, version-controlled, and reviewed in PR.*
+
+**Hook explosion.** Pre-commit hooks, agent-side hooks, MCP-server hooks, CI hooks. Each one was a good idea at the time. The cumulative cognitive load is the squad's actual development friction. *Mitigation: hook audit every quarter. Default move is to remove, not to add. Each hook owner has to defend the keep at audit time.*
+
+**Agent-fleet cost runaway.** Cloud agents, parallel runs, multi-step Codex jobs. The bill arrives on the wrong side of the budget. The CFO has questions. *Mitigation: per-team daily cost limit at the runtime layer, not on the dashboard. Hard cap that pages an owner when crossed.*
+
+**IP attribution disputes.** A code change is largely agent-generated, the human reviewer signs the commit, an external party disputes authorship. The firm has no documented position. *Mitigation: explicit authorship policy in the firm's engineering handbook. The reviewer is the author of record. The agent contribution is recorded in the audit trail but not in the commit metadata.*
+
+**Vendor lock-in via tool config.** The squad's productivity is real, the dependence on one vendor's tool is also real, the vendor changes pricing or terms. *Mitigation: the operating model treats the substrate as substitutable from day one. The substrate-agnostic stance in §3 is the policy, not the aspiration.*
+
+**Cognitive-debt accumulation.** Engineers stop carrying the design in their heads because the agent does. The next outage finds nobody who can debug the system live. *Mitigation: on-call engineers are still expected to debug without agent assistance. The expectation is written down. Postmortems explicitly note when the responder used or did not use AI tooling.*
+
+## 8. What I am not claiming
+
+This document is what one operator at one firm thinks works. The vantage point is real and it is also limited.
+
+I am not claiming that the operating model is the right one for every firm size. The patterns are written for the 50-500 engineer band; smaller orgs face different trade-offs, and larger orgs hit coordination costs the patterns do not address.
+
+I am not claiming that the per-squad uplift numbers will transfer. The measurement model in §5 (forthcoming) is reproducible; the numbers it produces are not portable across firms with materially different codebases, review cultures, or domain-risk profiles. Read the ranges; replicate the methodology.
+
+I am not claiming that the governance overlay in §4 (forthcoming) is a substitute for legal counsel. The mappings are operator-grade. An external auditor or regulator reviewing for compliance will want more than this document offers.
+
+I am not claiming that the substrate runtimes named in §3 will still be the right list in twelve months. The list will need refresh. The principle (pick two as the default, opt-in records form their own evidence) is more durable than the specific names.
+
+I am not claiming that the failure modes in §7 are complete. They are the seven I have either seen or read careful accounts of. The eighth one is the one that will surprise you, and the operating model's job is to make it surprise you with the smallest blast radius possible.
+
+## 9. References
+
+Linked inline rather than footnoted, so the reader does not need to scroll.
+
+- Amazon Web Services. [`awslabs/aidlc-workflows`](https://github.com/awslabs/aidlc-workflows). The canonical three-phase framing this document extends.
+- ISO/IEC. [ISO/IEC 42001:2023, Information technology — Artificial intelligence — Management system](https://www.iso.org/standard/81230.html). Annex A controls referenced throughout §4.
+- European Parliament. [Regulation (EU) 2024/1689 (the AI Act)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj). Article 12 (record-keeping), Article 15 (accuracy, robustness, cybersecurity) referenced throughout §§4-5.
+- National Institute of Standards and Technology. [AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/itl/ai-risk-management-framework).
+- UK Department for Science, Innovation and Technology. [AI Cyber Security Code of Practice](https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice).
+- Anthropic. [Building effective agents](https://www.anthropic.com/research/building-effective-agents). The December 2024 essay referenced in §2.
+- DORA Industry Report. Annual DevOps performance reports. The measurement model in §5 references DORA's four key metrics and explains where they break under AI augmentation.
+
+Sibling repositories: [`agentic-harness`](https://github.com/mindfulcto-labs/agentic-harness) (the runtime primitives), [`compliance-as-code`](https://github.com/mindfulcto-labs/compliance-as-code) (the schema and AIBOM emitter), [`awesome-ai-governance`](https://github.com/mindfulcto-labs/awesome-ai-governance) (the broader tool registry), [`engineering-standards`](https://github.com/mindfulcto-labs/engineering-standards) (phase-by-phase standards and checklists, when shipped).
+
 ---
 
-*Sections 4-9 in progress. v0.2 ships §§4-5 (Governance overlay, Measurement model). v0.3 ships §6 (Cognitive debt). Failure modes (§7) and "what I am not claiming" (§8) anchor the v0.2 release.*
+*Sections 4 (Governance overlay), 5 (Measurement model), 6 (Cognitive debt) are drafted and will land in v0.2 once the per-squad numbers have been anonymised to a publishable shape.*
