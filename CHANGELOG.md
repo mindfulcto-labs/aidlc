@@ -4,4 +4,4 @@ The repo does not follow semantic versioning. Substantive changes get a date and
 
 ## 2026-06-14
 
-- Initial commit. `AIDLC.md` ships §§1-3 (Why this exists, Three phases restated, Tool-agnostic substrate). §§4-9 are in draft. Path scaffolds in place for the five tracks. README, CONTRIBUTING, MAINTENANCE, dual licence (Apache 2.0 for code, CC BY-SA 4.0 for docs).
+- Initial release. `AIDLC.md` ships all nine sections: Why this exists, Three phases restated, Tool-agnostic substrate, Governance overlay, Measurement model, Cognitive debt, Failure modes, What I am not claiming, References. Five reading paths shipped with 30-minute, 3-hour, and 30-hour tiers fully populated. Four playbooks shipped (rolling out Claude Code, per-squad uplift metrics, governance posture, eval harness in production). Repository discipline in place: CONTRIBUTING bar, MAINTENANCE cadence, dual licence (Apache 2.0 for code, CC BY-SA 4.0 for docs).

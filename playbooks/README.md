@@ -1,17 +1,17 @@
 # Playbooks
 
-Operator-tested how-tos. Each playbook documents a specific rollout, decision, or operational shape that the author has actually run, not just read about. The bar is higher than the reading-list bar; if a playbook lands here, the author owns the consequences of telling someone else to do the same.
+Operator-tested how-tos. Each playbook documents a specific rollout, decision, or operational shape that the author has actually run. The bar is higher than the reading-list bar: if a playbook lands here, the author owns the consequences of telling someone else to do the same.
 
-## What ships v0.1
+## The four playbooks
 
-| Playbook | Audience | Status |
-|---|---|---|
-| `rolling-out-claude-code.md` | EMs and platform leads | drafted, lands v0.2 |
-| `per-squad-uplift-metrics.md` | EMs and engineering directors | drafted, lands v0.2 |
-| `governance-posture.md` | Directors, Risk, Compliance | drafted, lands v0.2 |
-| `eval-harness-in-production.md` | ML engineers and SREs | drafted, lands v0.3 |
+| Playbook | Audience |
+|---|---|
+| [`rolling-out-claude-code.md`](rolling-out-claude-code.md) | EMs and platform leads |
+| [`per-squad-uplift-metrics.md`](per-squad-uplift-metrics.md) | EMs and engineering directors |
+| [`governance-posture.md`](governance-posture.md) | Directors, Risk, Compliance |
+| [`eval-harness-in-production.md`](eval-harness-in-production.md) | ML engineers and SREs |
 
-## What does not ship
+## What does not get a playbook
 
 Playbooks that paraphrase someone else's experience. Playbooks for tools the author has not used in anger. Playbooks that depend on Dunnhumby-specific context. If a playbook would be more useful with internal-only details, it does not get published; it stays internal.
 

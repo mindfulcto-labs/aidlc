@@ -16,7 +16,7 @@ Pull requests are welcome. The bar is operator-tested over comprehensive.
 
 - A resource added without an annotation, or with an annotation that paraphrases the title.
 - A vendor brochure, a sales-deck PDF, or a video gated behind an email capture.
-- Any addition to the substrate table in `AIDLC.md` §3. The five-substrate set is intentional; new substrates are a v0.2 conversation.
+- Any addition to the substrate table in `AIDLC.md` §3. The five-substrate set is intentional. New substrates are a quarterly review conversation, not a PR.
 - Edits that introduce em-dashes, the words "transformative", "leverage", "robust", "world-class", or rule-of-three lists. These are pre-commit-hook flagged on the maintainer's side; PRs hit the same bar.
 
 ## What to expect on review

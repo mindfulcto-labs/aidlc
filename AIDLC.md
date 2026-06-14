@@ -18,7 +18,7 @@ What I want to add is the operating-model layer. The substrate that makes the to
 
 The short version: Amazon ships the toolchain. This document is the operating model. They are two halves of the same conversation.
 
-Two notes on how to read what follows. First, every claim is something I have either done, seen done, or governed. Where I am speaking from one operator's vantage point and the next operator's would differ, I say so. Second, the document is written to be acted on. There are no architecture diagrams in v0.1. There is a substrate table in §3 that you can copy into a planning doc tomorrow morning, and there is a measurement model in §5 you can hand to a sceptical finance partner. If you want diagrams, v0.2 will add them.
+Two notes on how to read what follows. First, every claim is something I have either done, seen done, or governed. Where I am speaking from one operator's vantage point and the next operator's would differ, I say so. Second, the document is written to be acted on. There is a substrate table in §3 that you can copy into a planning doc tomorrow morning, and there is a measurement model in §5 you can hand to a sceptical finance partner.
 
 ## 2. The three phases, restated for operators
 
@@ -65,7 +65,7 @@ A selection heuristic that works in practice:
 
 These are heuristics, not rules. A good EM will revise them quarterly as the substrate runtimes themselves evolve.
 
-What the operating model deliberately refuses to do is pick a winner. The vendor landscape is moving fast enough that any winner-pick in v0.1 of this document will look quaint by v0.2. The substrate-agnostic stance is the whole point of the operating model: the EM is investing in a way of working that survives the next vendor reshuffle.
+What the operating model deliberately refuses to do is pick a winner. The vendor landscape is moving fast enough that any winner-pick in this document will look quaint inside a year. The substrate-agnostic stance is the whole point of the operating model: the EM is investing in a way of working that survives the next vendor reshuffle.
 
 ## 4. The governance overlay
 
@@ -163,9 +163,9 @@ This document is what one operator at one firm thinks works. The vantage point i
 
 I am not claiming that the operating model is the right one for every firm size. The patterns are written for the 50-500 engineer band; smaller orgs face different trade-offs, and larger orgs hit coordination costs the patterns do not address.
 
-I am not claiming that the per-squad uplift numbers will transfer. The measurement model in §5 (forthcoming) is reproducible; the numbers it produces are not portable across firms with materially different codebases, review cultures, or domain-risk profiles. Read the ranges; replicate the methodology.
+I am not claiming that the per-squad uplift numbers will transfer. The measurement model in §5 is reproducible; the numbers it produces are not portable across firms with materially different codebases, review cultures, or domain-risk profiles. Read the ranges; replicate the methodology.
 
-I am not claiming that the governance overlay in §4 (forthcoming) is a substitute for legal counsel. The mappings are operator-grade. An external auditor or regulator reviewing for compliance will want more than this document offers.
+I am not claiming that the governance overlay in §4 is a substitute for legal counsel. The mappings are operator-grade. An external auditor or regulator reviewing for compliance will want more than this document offers.
 
 I am not claiming that the substrate runtimes named in §3 will still be the right list in twelve months. The list will need refresh. The principle (pick two as the default, opt-in records form their own evidence) is more durable than the specific names.
 
@@ -183,7 +183,7 @@ Linked inline rather than footnoted, so the reader does not need to scroll.
 - Anthropic. [Building effective agents](https://www.anthropic.com/research/building-effective-agents). The December 2024 essay referenced in §2.
 - DORA Industry Report. Annual DevOps performance reports. The measurement model in §5 references DORA's four key metrics and explains where they break under AI augmentation.
 
-Sibling repositories: [`agentic-harness`](https://github.com/mindfulcto-labs/agentic-harness) (the runtime primitives), [`compliance-as-code`](https://github.com/mindfulcto-labs/compliance-as-code) (the schema and AIBOM emitter), [`awesome-ai-governance`](https://github.com/mindfulcto-labs/awesome-ai-governance) (the broader tool registry), [`engineering-standards`](https://github.com/mindfulcto-labs/engineering-standards) (phase-by-phase standards and checklists, when shipped).
+Sibling repositories: [`agentic-harness`](https://github.com/mindfulcto-labs/agentic-harness) (the runtime primitives), [`compliance-as-code`](https://github.com/mindfulcto-labs/compliance-as-code) (the schema and AIBOM emitter), [`awesome-ai-governance`](https://github.com/mindfulcto-labs/awesome-ai-governance) (the broader tool registry), [`engineering-standards`](https://github.com/mindfulcto-labs/engineering-standards) (phase-by-phase standards and checklists).
 
 ---
 
