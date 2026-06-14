@@ -40,19 +40,6 @@ Documentation: [Creative Commons BY-SA 4.0](LICENSE-CC-BY-SA-4.0). Code samples 
 - [`awesome-ai-governance`](https://github.com/mindfulcto-labs/awesome-ai-governance) — the broader tool registry.
 - [`engineering-standards`](https://github.com/mindfulcto-labs/engineering-standards) — phase-by-phase standards and checklists that operationalise the manifesto. (Ships in week 6.)
 
-## Status
-
-| Artefact | Status | Next |
-|---|---|---|
-| `AIDLC.md` §§1-3 | shipped | v0.2 adds §§4-5 (governance overlay, measurement) |
-| `AIDLC.md` §§4-9 | drafts in progress | v0.2 target |
-| Path 1: AI-supported engineering | scaffold | v0.1 entries authored in week 2 |
-| Path 2: AI governance | scaffold | week 3 |
-| Path 3: Agentic AI | scaffold | week 4 |
-| Path 4: AI gateway | scaffold | week 5 |
-| Path 5: LLM evals and observability | scaffold | week 6 |
-| Playbooks | not started | weeks 6-8 |
-
 ## Versioning
 
 `AIDLC.md` carries `Last revised: YYYY-MM-DD` at the top. Substantive revisions update that date and add an entry to `CHANGELOG.md`. The repo is not a code library; it does not need semantic versioning, and pretending otherwise would invite the wrong kind of comparison.
